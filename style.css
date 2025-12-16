@@ -110,7 +110,7 @@ body {
 /* section1 */
 .section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/portrait-attractive-latin-studen.jpg') no-repeat center/cover;
-    background-color: rgb(52, 109, 133);
+    /* background-color: rgb(52, 109, 133); */
     height: 90vh;
     display: flex;
     align-items: center;
