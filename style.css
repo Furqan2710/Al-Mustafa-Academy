@@ -9,98 +9,171 @@
 }
 
 body {
-    /* font-family:'Times New Roman', Times, serif; */
-    font-family: Georgia, 'Times New Roman', Times, serif;
     /* background-color: rgb(108, 209, 223 ; */
     /* background-color: rgb(108, 209, 223); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+::selection {
+    background-color: #13547a;
+    color: white;
+}
+
+/* =================================================================== */
+/* =================================================================== */
+/* =================================================================== */
+
+/* NAVBAR */
 .subcontainer {
-    background-color: #80d0c7;
+    width: 100%;
+    /* background-color: #80d0c7;    */
     /* position: sticky; */
-    position: sticky !important;
-    z-index: 1 !important;
+    position: absolute;
+    top: 0;
     display: flex;
 }
 
+.navbar {
+    padding: 10px 30px;
+}
 
-#button1 {
-    width: 150px;
-    height: 45px;
-    border-radius: 25px;
-    border: none;
-    background-color: orange;
+.navbar-inner-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
-    font-size: large;
-    margin-left: -10px;
+    text-decoration: none;
 }
 
-#button1:hover {
-    color: black !important;
-    transition: 0.7s;
+.icon-cont #logo {
+    color: rgb(80, 173, 212);
+    margin: 0;
 }
 
-.navli {
-    /* background-color: blue; */
-    margin: 0 25px;
-    /* color: white !important; */
+.icon-cont h1 {
+    margin: 0;
+    font-size: 25px;
 }
 
-.nav-link:hover {
+.link-cont {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-grow: 0;
+}
+
+.link-cont ul {
+    display: flex;
+    gap: 10px;
+}
+
+.link-cont ul li {
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.link-cont ul li:active {
+    transform: scale(0.9);
+}
+
+.link-cont ul li a {
     color: white !important;
-    /* background-color: aqua; */
-    transition: 0.7s;
 }
 
+.button1 {
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(28, 112, 148);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: -10px;
+    transition: 0.3s ease;
+}
+
+.button1:active {
+    transform: scale(0.9);
+}
+
+
+
+/* ============================================ */
 
 /* section1 */
-
-section {
-    /* background-color:rgb(52, 109, 133) ; */
-    height: 86.5vh;
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+.section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/portrait-attractive-latin-studen.jpg') no-repeat center/cover;
+    /* background-color: rgb(52, 109, 133); */
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 50px;
+
+    border-bottom-right-radius: 250px;
 }
 
 .head {
     /* background-color: aqua; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    color: white;
 }
 
 
 #headerh1 {
-    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     font-size: 60px;
-    /* margin-top: 13%; */
-    color: white;
-    font-weight: bold;
-    text-align: center;
+    font-weight: 700;
+}
+
+#headerh5 {
+    color: #429ed3;
+    font-weight: 900;
+    font-size: 30px;
 }
 
 .search-container {
     /* background-color: aqua; */
+    /* box-shadow: 0 25px 70px -7px rgb(19, 80, 115); */
+    border-radius: 30px;
+    overflow: hidden;
     width: 750px;
     /* margin: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: 0.3s ease;
+}
+.search-container:focus-within {
+    box-shadow: 0 25px 70px -10px rgb(19, 80, 115);
 }
 
 .search-input {
     border: none;
-    border-radius: 30px;
+    outline: none;
     width: 100%;
     height: 60px;
+    padding: 10px;
     text-align: center;
-    /* position: relative; */
+    position: relative;
+    color: #1f97ca;
 }
+
 
 .searchbutton {
     border: none;
@@ -109,9 +182,9 @@ section {
     height: 50px;
     position: absolute;
     right: 1%;
-    background-color: #80d0c7;
+    background-color: #1c7094;
     color: white;
-    font-size: x-large;
+    font-size: 20px;
     /* margin-top: 5px; */
     /* text-align: end; */
     /* margin-left: 49%; */
@@ -121,13 +194,18 @@ section {
     position: absolute;
     left: 2%;
     top: 30%;
-    color: rgb(9, 154, 173);
+    color: #1f97ca;
     /* margin-right: 54%; */
     font-size: x-large;
     /* margin-top: 16px; */
     z-index: 10;
     /* margin-left: 2px; */
 }
+
+/* ============================================ */
+/* ============================================ */
+/* ============================================ */
+/* ============================================ */
 
 .courses {
     /* background-color: aqua; */
@@ -141,7 +219,8 @@ section {
 
 #courseh1 {
     font-size: 50px;
-    font-weight: bold;
+    color: #1b6794;
+    font-weight: 700;
     /* text-decoration: underline; */
 }
 
@@ -187,25 +266,27 @@ section {
     /* background-color: aqua; */
     display: flex;
     flex-wrap: wrap;
-    /* height: 60vh; */
     justify-content: center;
-    /* margin: 0 50px; */
-    /* border: 2px solid black; */
+    gap: 20px;
 }
 
 
 .card {
-    /* background-color: aqua; */
-    margin: 0 15px;
-    /* border: 1px solid black; */
     width: max(300px, 30%);
     cursor: pointer;
-    box-shadow: 10px 15px 20px rgb(136, 136, 136);
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+    /* color: #0c5b7c; */
+    overflow: hidden;
+    border: none;
+    border-radius: 25px;
+    transition: 0.5s ease;
 }
 
 .card:hover {
+    box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.2);
     transform: translateY(-8px);
-    transition: 0.5s;
+    background-color: #1c7094;
+    color: white;
 }
 
 .card-img-top {
@@ -213,72 +294,97 @@ section {
     object-fit: cover;
 }
 
+.card-body {
+    padding: 30px;
+
+}
 
 .card-title {
     /* background-color: aqua; */
     font-weight: bold;
     text-align: center;
-    text-decoration: underline;
-    /* line-height: -20px; */
+    text-transform: uppercase;
+    color: #1b6794;
+}
+
+.card:hover .card-title {
+    color: white;
 }
 
 .card-text {
     /* background-color: aqua; */
     padding-top: 15px;
-    font-style: italic;
+    text-align: center;
 }
 
 
 .tutorparent {
+    /* background-color: lightblue; */
+    margin-top: 120px;
+    padding: 0 40px;
     text-align: center;
     display: flex;
-    margin-top: 5em;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
 }
 
+.tutor-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(102, 73, 10); */
+    width: 40%;
+}
 
 .tutorh1 {
     font-weight: bold;
     font-size: 50px;
+    color: #1b6794;
 }
 
 .tutorh3 {
     font-weight: bold;
+    color: #1b6794;
     font-size: 23px;
-    /* color: darkgray; */
-    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #13547a;
 }
-
-.tutorh4 {
-    font-weight: bold;
-    margin-top: 5px;
-}
-
 
 .tutorp {
     /* background-color: aqua; */
     /* text-align:center; */
-    /* width: 30%; */
+    /* width: 40%; */
+    color: #4e7a95;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 22px;
-    font-style: italic;
 }
 
 
 .tutorimg {
-    width: 40%;
-    /* height: 100vh; */
-    /* margin-top: 30px; */
-    margin: auto;
-    box-shadow: 10px 15px 20px rgb(136, 136, 136);
+    /* width: 40%; */
+    height: 70vh;
+    border-radius: 30px;
+    box-shadow: 5px 10px 50px -10px rgb(0, 0, 0, 0.5);
 }
 
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+/* ============================================================== */
+
+/* REVIEWS */
+.reviews-cont {
+    margin-top: 50px;
+}
 
 .heading h1 {
     font-size: 50px;
     font-weight: bold;
     /* background-color: aqua; */
+    color: #1b6794;
     margin-top: 100px;
     display: flex;
     justify-content: center;
@@ -288,48 +394,56 @@ section {
 .reviews {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 80px;
+    gap: 20px;
 }
 
 
 .rate {
     text-align: center;
     margin-top: 20px;
-    font-size: 23px;
+    font-size: 18px;
 }
-
 
 .ratep {
     text-align: center;
 }
 
+/* ============================ */
+/* ============================ */
+/* ============================ */
+/* ============================ */
+
+/* LOCATION */
 .get h1 {
     font-size: 50px;
+    color: #1b6794;
     font-weight: bold;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 150px;
+}
+
+.getin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 50px;
+    width: 100%;
 }
 
 .map {
     /* margin-top: 50px; */
     height: 60vh;
-    width: 70%;
+    width: 60%;
     text-align: center;
     /* background-color: aqua; */
 }
 
 .map1 {
     height: 100%;
-    width: 90%;
-}
-
-
-.getin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
     width: 100%;
+    border-radius: 30px;
 }
 
 .address {
@@ -338,79 +452,96 @@ section {
     width: 415px;
 }
 
-
 .addressh {
     font-weight: bold;
+    font-size: 35px;
+    color: #135073;
 }
 
 .addressp {
-    color: #80d0c7;
+    color: #1b6794;
     font-weight: bold;
     cursor: pointer;
 }
 
 .addressdiv {
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.addressdiv p a{
+.addressdiv p a {
     text-decoration: none;
 }
 
-.no{
+.no {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* FOOTER */
+
 .footer {
     margin-top: 10em;
+    height: 400px;
+    padding: 30px;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
+    background-color: #1a2f3a;
 }
-.footer > div{
+
+.footerlogo {
+    align-items: flex-start;
+}
+
+.footerlogo i {
+    color: rgb(80, 173, 212);
+}
+
+.footerlogo h1 {
+    color: rgb(255, 255, 255);
+}
+
+.footer>div {
+    /* background-color: lightcoral; */
     margin: 15px;
+    height: 70%;
 }
+
 .footerbody h2 {
     /* background-color: aqua; */
-    color: #13547a;
+    color: #227cb0;
     cursor: pointer;
     font-weight: bold;
 }
 
 .footerbody p {
-    color: #13547a;
+    color: #ffffff;
     cursor: pointer;
-    font-weight: bold;
-    font-size: large;
-}
-
-.footerbody p:hover, .addressp:hover {
-    color: black !important;
-    transition: 0.5s;
+    font-size: 15px;
 }
 
 
 .end {
     text-align: center;
-    margin-top: 8em;
-    margin-bottom: 3em;
-    font-size: large;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    background-color: #1a2f3a;
+    padding: 10px;
+    color: #ffffff;
 }
 
-.end span {
-    color: #13547a;
-
-}
-
-.portfolio a, .footerbody p a{
+.portfolio a,
+.footerbody p a {
     text-decoration: none;
-    color: #13547a;
+    color: #ffffff;
 }
-.portfolio a:hover , .footerbody p a:hover{
-    color: black;
-    cursor: pointer;
-}
+
 
 /* Media Query */
 
@@ -458,7 +589,8 @@ section {
         /* flex-direction: column; */
         align-items: center;
     }
-    .footer{
+
+    .footer {
         margin: 10em 20px 0px 20px;
     }
 }
@@ -468,7 +600,8 @@ section {
         width: max(300px, 40%);
         margin: 10px;
     }
-    .email{
+
+    .email {
         display: block;
         width: 200px;
         overflow-wrap: anywhere;
@@ -489,16 +622,20 @@ section {
         font-size: 50px;
         margin-bottom: 30px;
     }
-    .reviews{
+
+    .reviews {
         flex-wrap: wrap;
     }
-    .getin{
+
+    .getin {
         flex-direction: column;
     }
-    .address{
+
+    .address {
         margin-top: 100px;
     }
-    .map{
+
+    .map {
         width: 90%;
     }
 }
@@ -512,30 +649,38 @@ section {
     .card {
         width: 80%;
     }
-    .tutorimg{
+
+    .tutorimg {
         width: 60%;
     }
-    .email{
+
+    .email {
         display: inline;
     }
-    .footer{
+
+    .footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .footerbody{
+
+    .footerbody {
         display: flex;
         flex-direction: column;
         align-self: center;
         text-align: center;
     }
-    .footerbody h2, .footerlogo h1{
+
+    .footerbody h2,
+    .footerlogo h1 {
         font-size: 40px;
     }
-    .footerbody p{
+
+    .footerbody p {
         font-size: 25px;
     }
-    .end{
+
+    .end {
         margin-top: 3em;
     }
 }
@@ -544,19 +689,22 @@ section {
     .search-container {
         width: 95%;
     }
-    .search-input{
+
+    .search-input {
         font-size: 15px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .address{
+    .address {
         width: 80%;
     }
-    .addressdiv{
+
+    .addressdiv {
         font-size: 15px;
     }
-    .addressh{
+
+    .addressh {
         font-size: 20px;
     }
 }
