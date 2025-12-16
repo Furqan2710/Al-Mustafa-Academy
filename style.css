@@ -13,68 +13,94 @@ body {
     /* background-color: rgb(108, 209, 223); */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 /* =================================================================== */
 /* =================================================================== */
 /* =================================================================== */
 
 /* NAVBAR */
+.subcontainer {
+    width: 100%;
+    /* background-color: #80d0c7;    */
+    /* position: sticky; */
+    position: absolute;
+    top: 0;
+    display: flex;
+}
 
-.navbar-brand{
+.navbar {
+    padding: 10px 30px;
+}
+
+.navbar-inner-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-cont {
     display: flex;
     align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
 }
-.navbar-brand #logo{
+
+.icon-cont #logo {
+    color: rgb(80, 173, 212);
     margin: 0;
 }
-.navbar-brand h1{
+
+.icon-cont h1 {
     margin: 0;
     font-size: 25px;
 }
 
-.subcontainer {
-    background-color: #80d0c7;
-    /* position: sticky; */
-    position: sticky !important;
-    z-index: 1 !important;
+.link-cont {
     display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-
-#button1 {
-    width: 150px;
-    height: 45px;
-    border-radius: 25px;
-    border: none;
-    background-color: orange;
-    color: white;
-    font-size: large;
-    margin-left: -10px;
+.link-cont ul {
+    display: flex;
+    gap: 10px;
 }
 
-#button1:hover {
-    color: black !important;
-    transition: 0.7s;
+.link-cont ul li {
+    font-size: 15px;
+    transition: 0.3s ease;
 }
-
-.navli {
-    /* background-color: blue; */
-    margin: 0 25px;
-    /* color: white !important; */
+.link-cont ul li:active{
+    transform: scale(0.9);
 }
-
-.nav-link:hover {
+.link-cont ul li a{
     color: white !important;
-    /* background-color: aqua; */
-    transition: 0.7s;
 }
 
+.button1 {
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(28, 112, 148);
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: -10px;
+    transition: 0.3s ease;
+}
+.button1:active{
+    transform: scale(0.9);
+}
+
+/* ============================================ */
 
 /* section1 */
-
-section {
-    /* background-color:rgb(52, 109, 133) ; */
-    height: 86.5vh;
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+.section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/portrait-attractive-latin-studen.jpg') no-repeat center/cover;
+    background-color: rgb(52, 109, 133);
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,11 +395,11 @@ section {
     font-size: 20px;
 }
 
-.addressdiv p a{
+.addressdiv p a {
     text-decoration: none;
 }
 
-.no{
+.no {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -382,9 +408,11 @@ section {
     display: flex;
     justify-content: space-evenly;
 }
-.footer > div{
+
+.footer>div {
     margin: 15px;
 }
+
 .footerbody h2 {
     /* background-color: aqua; */
     color: #13547a;
@@ -399,7 +427,8 @@ section {
     font-size: large;
 }
 
-.footerbody p:hover, .addressp:hover {
+.footerbody p:hover,
+.addressp:hover {
     color: black !important;
     transition: 0.5s;
 }
@@ -419,11 +448,14 @@ section {
 
 }
 
-.portfolio a, .footerbody p a{
+.portfolio a,
+.footerbody p a {
     text-decoration: none;
     color: #13547a;
 }
-.portfolio a:hover , .footerbody p a:hover{
+
+.portfolio a:hover,
+.footerbody p a:hover {
     color: black;
     cursor: pointer;
 }
@@ -474,7 +506,8 @@ section {
         /* flex-direction: column; */
         align-items: center;
     }
-    .footer{
+
+    .footer {
         margin: 10em 20px 0px 20px;
     }
 }
@@ -484,7 +517,8 @@ section {
         width: max(300px, 40%);
         margin: 10px;
     }
-    .email{
+
+    .email {
         display: block;
         width: 200px;
         overflow-wrap: anywhere;
@@ -505,16 +539,20 @@ section {
         font-size: 50px;
         margin-bottom: 30px;
     }
-    .reviews{
+
+    .reviews {
         flex-wrap: wrap;
     }
-    .getin{
+
+    .getin {
         flex-direction: column;
     }
-    .address{
+
+    .address {
         margin-top: 100px;
     }
-    .map{
+
+    .map {
         width: 90%;
     }
 }
@@ -528,30 +566,38 @@ section {
     .card {
         width: 80%;
     }
-    .tutorimg{
+
+    .tutorimg {
         width: 60%;
     }
-    .email{
+
+    .email {
         display: inline;
     }
-    .footer{
+
+    .footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .footerbody{
+
+    .footerbody {
         display: flex;
         flex-direction: column;
         align-self: center;
         text-align: center;
     }
-    .footerbody h2, .footerlogo h1{
+
+    .footerbody h2,
+    .footerlogo h1 {
         font-size: 40px;
     }
-    .footerbody p{
+
+    .footerbody p {
         font-size: 25px;
     }
-    .end{
+
+    .end {
         margin-top: 3em;
     }
 }
@@ -560,19 +606,22 @@ section {
     .search-container {
         width: 95%;
     }
-    .search-input{
+
+    .search-input {
         font-size: 15px;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .address{
+    .address {
         width: 80%;
     }
-    .addressdiv{
+
+    .addressdiv {
         font-size: 15px;
     }
-    .addressh{
+
+    .addressh {
         font-size: 20px;
     }
 }
